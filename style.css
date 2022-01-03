@@ -26,12 +26,12 @@ h3 {
   font-size: 30px;
   text-transform: uppercase;  
   letter-spacing: 7px;
-  word-spacing: 5px;
-  color: #db5323;  
+  word-spacing: 5px;    
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 400;
+  color: #db5323;
 }
 
 h2 {
@@ -57,6 +57,29 @@ h3 {
   background-color: #CCE6F4;
 }
 
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-link {
+  padding: 5px 20px;
+  margin: 0 20px;
+  background-color: #CCE6F4;
+  font-size: 20px;
+  line-height: 50px;
+  text-decoration: none;
+  color: #175676;
+  transition: 0.3s;
+}
+
+.nav-link:hover {
+  background-color: rgba(224, 240, 255, 0.5);
+  color: #000;
+}
+
 .main_content_container {
   display: flex;
   justify-content: center;
@@ -68,7 +91,7 @@ h3 {
   border-bottom: 10px solid #88c0e3;
 }
 
-.main_content_heading > section.profile {
+section.profile {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,32 +108,9 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 5px 20px;
   font-size: 24px;
   color: #ffffff;  
-}
-
-.nav-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  list-style: none;  
-}
-
-.nav-link {
-  padding: 5px 20px;
-  margin: 0 20px;
-  background-color: #CCE6F4;
-  font-size: 20px;
-  line-height: 50px;
-  text-decoration: none;
-  color: #175676;
-  transition: 0.3s;  
-}
-
-.nav-link:hover {
-  background-color: rgba(224, 240, 255, 0.5);
-  color: #000;
 }
 
 .section-content {
@@ -127,14 +127,6 @@ a:hover {
   transition: 0.5s;
 }
 
-.pre {
-  width: 70%;
-  margin: 5px 0;
-  padding: 5px 10px;
-  border-left: 5px solid #88c0e3;  
-  background-color: #CCE6F4;  
-}
-
 .github-link {
   text-decoration: none;
   color: #ffffff;
@@ -148,7 +140,10 @@ a:hover {
 .profile_photo {
   width: 250px;
   height: 250px;
-  padding: 0 10px;
+}
+
+.profile-title {
+  margin-left: 10px;
 }
 
 .logo-rs-school {
@@ -157,8 +152,28 @@ a:hover {
   padding: 10px 0;
 }
 
+.pre {
+  width: 70%;
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-left: 5px solid #88c0e3;
+  background-color: #CCE6F4;
+}
+
 @media (max-width: 768px) {
-  .main_content_container>section {
+
+  .main_content_container > section {
     width: 100%;
+  }
+
+  section.profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-list {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
   }
 }
